@@ -1,0 +1,90 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 120px;
+}
+
+body {
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+}
+
+input[type="range"] {
+  background-color: white;
+}
+ 
+input[type="range"]::-webkit-slider-thumb {
+  background-color: gray;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dial {
+    border: 1px solid #888;
+    background-color: #ddd;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    transform-origin: 50% 50%;
+} 
+
+.dial:after {
+    content: "";
+    border-radius: 50%;
+    background-color: #fff;
+    height: 34px;
+    width: 34px;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2), -1px -1px 2px rgba(255,255,255,0.2), 0px 0px 5px rgba(0,0,0,0.3);
+    z-index: 1;
+}
+
+.dial:active {
+  cursor: pointer;
+  transition-duration: 0.2s;
+  transform: scale(0.95);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3), -1px -1px 2px rgba(255,255,255,0.2), 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+.dial:hover {
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.3), -1px -1px 2px rgba(255,255,255,0.2), 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+input.dial {
+  text-align:center;
+  font-size:14px;
+  position:relative;
+  top:40%;
+  color: #333;
+  font-weight: bold;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color: #0069d9;
+}
+ 
+img {
+  height: 25px;
+  margin-right: 5px;
+}
